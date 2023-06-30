@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Tables</title>
+    <style>
+        /* CSS styles for the table */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        table, th, td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+        
+        .column1 {
+            background-color: #FFC0CB;
+        }
+        
+        .column2 {
+            background-color: #ADD8E6;
+        }
+        
+        .column3 {
+            background-color: #FFD700;
+        }
+        
+        .column4 {
+            background-color: #98FB98;
+        }
+        
+        .column5 {
+            background-color: #FFA07A;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th class="column1">Multiples of 1</th>
+            <th class="column2">Multiples of 2</th>
+            <th class="column3">Multiples of 3</th>
+            <th class="column4">Multiples of 4</th>
+            <th class="column5">Multiples of 5</th>
+        </tr>
+        <tr>
+            <td class="column1-content" style=background-color:#FFC0CB></td>
+            <td class="column2-content" style="background-color:#ADD8E6;"></td>
+            <td class="column3-content" style="background-color:#FFD700;"></td>
+            <td class="column4-content" style="background-color:#98FB98;" ></td>
+            <td class="column5-content" style="background-color:#FFA07A;"></td>
+        </tr>
+    </table>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var column1 = document.querySelector(".column1-content");
+            var column2 = document.querySelector(".column2-content");
+            var column3 = document.querySelector(".column3-content");
+            var column4 = document.querySelector(".column4-content");
+            var column5 = document.querySelector(".column5-content");
+            
+            for (var i = 1; i <= 10; i++) {
+                column1.innerHTML += "1 x " + i + " = " + (1 * i) + "<br>";
+                column2.innerHTML += "2 x " + i + " = " + (2 * i) + "<br>";
+                column3.innerHTML += "3 x " + i + " = " + (3 * i) + "<br>";
+                column4.innerHTML += "4 x " + i + " = " + (4 * i) + "<br>";
+                column5.innerHTML += "5 x " + i + " = " + (5 * i) + "<br>";
+            }
+        });
+    </script>
+</body>
+</html>
